@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "747538141656",
+    "project_id": "medium-blog-clone-4e2f5",
+    "storage_bucket": "medium-blog-clone-4e2f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747538141656:android:cc522ff7f13dc12ec762ad",
+        "android_client_info": {
+          "package_name": "com.chigala.flutter_blog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747538141656-76u4i7khoaleossdck4o63ino75o0mj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAybIePxR0nb0COfYbQXxBFe1CySrWI4C4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747538141656-76u4i7khoaleossdck4o63ino75o0mj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
