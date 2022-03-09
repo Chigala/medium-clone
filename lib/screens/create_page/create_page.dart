@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/constants/themes.dart';
 import 'package:flutter_blog/provider/store.dart';
-import 'package:flutter_blog/utils/create_box.dart';
+import 'package:flutter_blog/screens/create_page/create_box.dart';
 import 'package:provider/provider.dart';
 
 class CreatePage extends StatefulWidget {
@@ -37,13 +37,13 @@ class _CreatePageState extends State<CreatePage> {
           children: [
             isDark
                 ? Image.asset(
-                    "assets/darktypewriter.jpg",
+                    "assets/images/darktypewriter.jpg",
                     fit: BoxFit.fitWidth,
                     height: 100,
                     width: 400,
                   )
                 : Image.asset(
-                    "assets/whitetypewriter.jpg",
+                    "assets/images/whitetypewriter.jpg",
                     fit: BoxFit.fitWidth,
                     height: 100,
                     width: 400,

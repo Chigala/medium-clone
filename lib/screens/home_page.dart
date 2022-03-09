@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/constants/themes.dart';
-import 'package:flutter_blog/screens/Reading_List.dart';
-import 'package:flutter_blog/screens/activity_page.dart';
-import 'package:flutter_blog/screens/create_page.dart';
-import 'package:flutter_blog/screens/post_page.dart';
-import 'package:flutter_blog/screens/profile_page.dart';
+import 'package:flutter_blog/screens/activity_page/activity_page.dart';
+import 'package:flutter_blog/screens/create_page/create_page.dart';
+import 'package:flutter_blog/screens/post_page/post_page.dart';
+import 'package:flutter_blog/screens/profile_page/profile_page.dart';
+import 'package:flutter_blog/screens/reading_page/reading_list.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,31 +27,33 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        
+        backgroundColor: Theme.of(context).backgroundColor,
         bottomNavigationBar: BottomNavigationBar(
+            iconSize: 26,
             showSelectedLabels: false,
             showUnselectedLabels: false,
             backgroundColor: darkBlack,
             elevation: 0,
             currentIndex: selectedPage,
-            selectedItemColor: Colors.red,
-            unselectedItemColor: Colors.white,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: const Color.fromARGB(199, 158, 158, 158),
             type: BottomNavigationBarType.fixed,
-            onTap: ( index) {
+            onTap: (index) {
               setState(() {
                 selectedPage = index;
               });
             },
             items: const [
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.home), label: "home"),
+                  icon: Icon(Icons.home_outlined), label: "home"),
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.book), label: "stack"),
+                  icon: Icon(Icons.bookmarks_sharp), label: "stack"),
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.solidPaperPlane), label: "create"),
+                  icon: Icon(Icons.library_books_sharp), label: "create"),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.notification_important), label: "activity"),
-              BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
+                  icon: Icon(Icons.notifications), label: "activity"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person), label: "profile"),
             ]),
         body: IndexedStack(index: selectedPage, children: screen));
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/constants/themes.dart';
-import 'package:flutter_blog/screens/text_editor.dart';
+import 'package:flutter_blog/screens/create_page/text_editor.dart';
 
 class CreateBox extends StatelessWidget {
   const CreateBox({
@@ -18,7 +18,7 @@ class CreateBox extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         debugPrint("ready to write a story is working");
-        Navigator.of(context).pushReplacement(CupertinoPageRoute(
+        Navigator.of(context).push(CupertinoPageRoute(
                       builder: (BuildContext context) => const TextEditor()));
       },
       child: Container(

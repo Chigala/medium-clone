@@ -9,15 +9,18 @@ class ReusableFooter extends StatelessWidget {
       required this.routeMethod})
       : super(key: key);
   final String text;
-  final routeMethod;
+  final Function routeMethod;
   final String highlightedText;
 
   @override
   Widget build(BuildContext context) {
-    TextStyle richTextStyle = const TextStyle(color: Colors.green);
+    TextStyle richTextStyle =
+        const TextStyle(color: Colors.green, fontSize: 18);
     return RichText(
         text: TextSpan(children: <TextSpan>[
-      TextSpan(text: text),
+      TextSpan(
+        text: text,
+      ),
       TextSpan(
         text: highlightedText,
         style: richTextStyle,
